@@ -111,7 +111,7 @@ PROVIDERS = {
     },
     "ollama": {
         "name": "🏠 Ollama (Local - Unlimited)",
-        "free_tier": "100% free — runs on your machine — no limits",
+        "free_tier": "100% free — no limits",
         "signup_url": "https://ollama.ai",
         "needs_key": False,
     },
