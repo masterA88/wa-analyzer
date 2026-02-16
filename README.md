@@ -1,11 +1,11 @@
 # 💬 WhatsApp Group Analyzer
 
-> Transform WhatsApp chat exports into actionable community intelligence — 100% free and open-source.
+> Transform WhatsApp chat exports into actionable community intelligence — 100% free and open-source. 
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-red)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Cost](https://img.shields.io/badge/Cost-$0-brightgreen)
+
+## Welcome! I'm Hilmi, the creator of this project. Explore the live application here:
+
+
 
 ---
 
@@ -121,14 +121,6 @@ The modular architecture makes it easy to add:
 | **Docker deployment** | Add Dockerfile (template below) | Easy |
 | **Webhook alerts** | Add Telegram/Discord bot integration | Medium |
 
-### Deploy to Streamlit Cloud (Free)
-
-1. Push code to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your repo → Deploy → Done!
-
 ---
 
-## 📝 License
 
-MIT — Free for personal and commercial use.
