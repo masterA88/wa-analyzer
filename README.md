@@ -1,6 +1,6 @@
 # 💬 WhatsApp Group Analyzer
 
-> Transform WhatsApp chat exports into actionable community intelligence — 100% free and open-source. 
+> Transform WhatsApp chat exports into actionable community intelligence - 100% free and open-source. 
 
 
 ## Welcome! I'm Hilmi, the creator of this project. Explore the live application here:
