@@ -8,7 +8,7 @@ Free providers (no credit card needed):
 - Groq (Llama 4)        → 1,000 req/day free
 - HuggingFace Inference  → 1,000 req/day free
 - OpenRouter (free models)→ varies
-- Local Ollama           → unlimited, runs on your PC
+- Local Ollama           → unlimited
 """
 
 import streamlit as st
