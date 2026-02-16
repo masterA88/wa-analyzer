@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>README.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///r%3A/2.Travail/1.Enseignement/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css"><link rel="stylesheet" href="file:///d%3A/rdaros/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="%F0%9F%92%AC-whatsapp-group-analyzer">💬 WhatsApp Group Analyzer</h1>
+<blockquote>
+<p>Transform WhatsApp chat exports into actionable community intelligence - 100% free and open-source.</p>
+</blockquote>
+<h2 id="welcome-im-hilmi-the-creator-of-this-project-explore-the-live-application-here">Welcome! I'm Hilmi, the creator of this project. Explore the live application here:</h2>
+<p><a href="https://wa-analyzer.streamlit.app/"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit"></a></p>
+<hr>
+<h2 id="%F0%9F%9A%80-quick-start">🚀 Quick Start</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># 1. Clone / download the project</span>
+<span class="hljs-built_in">cd</span> wa-analyzer
+
+<span class="hljs-comment"># 2. Install dependencies (all free)</span>
+pip install -r requirements.txt
+
+<span class="hljs-comment"># 3. Run the app</span>
+streamlit run app.py
+</div></code></pre>
+<p>Then upload your WhatsApp chat export (<code>.txt</code> or <code>.zip</code>) and explore!</p>
+<hr>
+<h2 id="%F0%9F%93%B1-how-to-export-whatsapp-chat">📱 How to Export WhatsApp Chat</h2>
+<ol>
+<li>Open your WhatsApp group</li>
+<li>Tap <strong>⋮ More</strong> → <strong>Export Chat</strong> → <strong>Without Media</strong></li>
+<li>Save the <code>.txt</code> or <code>.zip</code> file</li>
+<li>Upload it to the app</li>
+</ol>
+<hr>
+<h2 id="%F0%9F%93%8A-features-10-pages">📊 Features (10 Pages)</h2>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📊</td>
+<td><strong>Overview Dashboard</strong></td>
+<td>KPIs, trends, message volume, media breakdown</td>
+</tr>
+<tr>
+<td>🏆</td>
+<td><strong>User Leaderboard</strong></td>
+<td>Top N selector, engagement tiers, activity heatmap</td>
+</tr>
+<tr>
+<td>📇</td>
+<td><strong>Member Directory</strong></td>
+<td>Auto-extracted names, locations, LinkedIn profiles</td>
+</tr>
+<tr>
+<td>⏰</td>
+<td><strong>Temporal Analytics</strong></td>
+<td>Hourly/daily/weekly patterns, calendar heatmap</td>
+</tr>
+<tr>
+<td>💬</td>
+<td><strong>Topics &amp; Content</strong></td>
+<td>Word cloud, topic tracking, shared resources</td>
+</tr>
+<tr>
+<td>😊</td>
+<td><strong>Emoji &amp; Sentiment</strong></td>
+<td>Emoji leaderboard, mood indicators, humor index</td>
+</tr>
+<tr>
+<td>🕸️</td>
+<td><strong>Social Network</strong></td>
+<td>Interactive interaction graph, influencer metrics</td>
+</tr>
+<tr>
+<td>📝</td>
+<td><strong>AI Chat Summary</strong></td>
+<td>LLM-powered summarization (plug any free API)</td>
+</tr>
+<tr>
+<td>🔍</td>
+<td><strong>Search Messages</strong></td>
+<td>Full-text search with filters</td>
+</tr>
+<tr>
+<td>📥</td>
+<td><strong>Export Center</strong></td>
+<td>CSV, Excel, JSON export for all data</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%92%B0-cost-0">💰 Cost: $0</h2>
+<p><strong>Every single component is free:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Library</th>
+<th>License</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web Framework</td>
+<td>Streamlit</td>
+<td>Apache 2.0</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Charts</td>
+<td>Plotly</td>
+<td>MIT</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Data Processing</td>
+<td>Pandas, NumPy</td>
+<td>BSD</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Word Clouds</td>
+<td>wordcloud</td>
+<td>MIT</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Network Analysis</td>
+<td>NetworkX</td>
+<td>BSD</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Emoji Processing</td>
+<td>emoji</td>
+<td>BSD</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Excel Export</td>
+<td>openpyxl, xlsxwriter</td>
+<td>MIT</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Streamlit Cloud</td>
+<td>—</td>
+<td>Free tier</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI Summary (optional, all have free tiers):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Free Tier</th>
+<th>How to Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Gemini</td>
+<td>15 req/min</td>
+<td><a href="https://aistudio.google.com">aistudio.google.com</a></td>
+</tr>
+<tr>
+<td>Groq</td>
+<td>Generous limits</td>
+<td><a href="https://console.groq.com">console.groq.com</a></td>
+</tr>
+<tr>
+<td>Ollama (local)</td>
+<td>Unlimited</td>
+<td><a href="https://ollama.ai">ollama.ai</a></td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td>$5 trial</td>
+<td><a href="https://platform.openai.com">platform.openai.com</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%8F%97%EF%B8%8F-architecture">🏗️ Architecture</h2>
+<pre class="hljs"><code><div>wa-analyzer/
+├── app.py                      # Main entry — upload + routing
+├── .streamlit/config.toml      # Theme configuration
+├── pages/
+│   ├── 1_📊_Overview.py
+│   ├── 2_🏆_Leaderboard.py
+│   ├── 3_📇_Directory.py
+│   ├── 4_⏰_Temporal.py
+│   ├── 5_💬_Topics.py
+│   ├── 6_😊_Sentiment.py
+│   ├── 7_🕸️_Network.py
+│   ├── 8_📝_AI_Summary.py
+│   ├── 9_🔍_Search.py
+│   └── 10_📥_Export.py
+├── utils/
+│   ├── __init__.py
+│   ├── parser.py               # WhatsApp format parser
+│   └── helpers.py              # Shared utilities
+├── assets/
+│   └── style.css               # Custom theme
+├── requirements.txt
+└── README.md
+</div></code></pre>
+<hr>
+<h2 id="%F0%9F%94%8C-scaling-up--future-add-ons">🔌 Scaling Up — Future Add-ons</h2>
+<p>The modular architecture makes it easy to add:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>How</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI Summaries</strong></td>
+<td>Uncomment AI provider in requirements.txt, add API key</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td><strong>Multi-group comparison</strong></td>
+<td>Upload multiple files, store in DuckDB</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td><code>streamlit-authenticator</code> package</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><strong>Scheduled reports</strong></td>
+<td>Cron job + email via <code>smtplib</code></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Database backend</strong></td>
+<td>Replace DataFrames with DuckDB/SQLite</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Docker deployment</strong></td>
+<td>Add Dockerfile (template below)</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><strong>Webhook alerts</strong></td>
+<td>Add Telegram/Discord bot integration</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+</body>
+
+</html>

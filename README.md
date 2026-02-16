@@ -4,7 +4,7 @@
 
 
 ## Welcome! I'm Hilmi, the creator of this project. Explore the live application here:
-**[View the Live App on Streamlit Cloud] (https://wa-analyzer.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wa-analyzer.streamlit.app/)
 
 
 ---
