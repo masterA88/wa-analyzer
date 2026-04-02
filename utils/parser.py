@@ -26,6 +26,8 @@ PATTERNS = [
     r'(\d{1,2}/\d{1,2}/\d{2,4}),\s*(\d{1,2}:\d{2}\s*[APap][Mm])\s*-\s*(.*)',
     # DD/MM/YYYY, HH:MM  (no seconds)
     r'\[(\d{1,2}/\d{1,2}/\d{2,4}),\s*(\d{1,2}[:.]\d{2})\]\s*(.*)',
+    # M/D/YY, HH:MM - (no brackets, 24-hour, dash separator) — Android/iOS modern export
+    r'(\d{1,2}/\d{1,2}/\d{2,4}),\s*(\d{1,2}:\d{2})\s*-\s*(.*)',
 ]
 
 
@@ -109,7 +111,7 @@ def parse_chat(text):
     current_content = None
 
     for line in lines:
-        line = line.strip('\r\n\ufeff\u200e\u200f')
+        line = line.strip('\r\n\ufeff\u200e\u200f\u202f')
         match = re.match(pattern, line)
 
         if match:
